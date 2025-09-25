@@ -272,7 +272,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_fwbjo")
 metadata/_edit_group_ = true
 
@@ -282,6 +282,7 @@ animation = &"big_to_shooting"
 script = ExtResource("25_4qod7")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 6
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.5, 0)

@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://utyarnokc7ep"]
+[gd_scene load_steps=13 format=3 uid="uid://utyarnokc7ep"]
 
 [ext_resource type="Texture2D" uid="uid://bh2i2pbd72n30" path="res://Assets Super Mario Bros/Sprites/GroundBlock.png" id="1_encha"]
 [ext_resource type="Texture2D" uid="uid://8as4lix1a8pr" path="res://Assets Super Mario Bros/Sprites/HardBlock.png" id="2_mk856"]
 [ext_resource type="Texture2D" uid="uid://dtkrgfs1x5qrr" path="res://Assets Super Mario Bros/Sprites/UndergroundBrick.png" id="3_obf6a"]
 [ext_resource type="Texture2D" uid="uid://dbhkvad8kmca" path="res://Assets Super Mario Bros/Sprites/UndergroundBlock.png" id="4_qbyd6"]
 [ext_resource type="PackedScene" uid="uid://bqfiw6vwe3b1k" path="res://cenas/player.tscn" id="5_2kb21"]
+[ext_resource type="PackedScene" uid="uid://d1b6l45kby6ct" path="res://cenas/goomba.tscn" id="6_m56cs"]
+[ext_resource type="PackedScene" uid="uid://cyr3imtob01to" path="res://cenas/koopa.tscn" id="7_8enju"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2pe8"]
 texture = ExtResource("1_encha")
@@ -45,3 +47,17 @@ layer_0/tile_data = PackedInt32Array(458739, 0, 0, 458740, 0, 0, 458741, 0, 0, 4
 
 [node name="Player" parent="." instance=ExtResource("5_2kb21")]
 position = Vector2(-194, 55)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Goomba" parent="Enemies" instance=ExtResource("6_m56cs")]
+position = Vector2(-1, 56)
+
+[node name="Koopa" parent="Enemies" instance=ExtResource("7_8enju")]
+position = Vector2(125, 52)
+
+[node name="Goomba2" parent="Enemies" instance=ExtResource("6_m56cs")]
+position = Vector2(84, 55)
+
+[node name="Koopa2" parent="Enemies" instance=ExtResource("7_8enju")]
+position = Vector2(40, 51)
