@@ -2,6 +2,8 @@ extends Area2D
 
 class_name Enemy
 
+const POINTS_LABEL_SCENE = preload("res://cenas/points_label.tscn")
+
 @export var horizontal_speed = 20
 @export var vertical_speed = 100
 @onready var ray_cast_2d = $RayCast2D as RayCast2D
@@ -29,6 +31,10 @@ func die_from_hit():
 	var die_tween = get_tree().create_tween()
 	die_tween.tween_property(self, "position", position + Vector2(0, -25), .2)
 	die_tween.chain().tween_property(self, "position", position + Vector2(0, 500), 4)
+	
+	var points_label = POINTS_LABEL_SCENE.instantiate()
+	points_label.position = self.position + Vector2(-20, -20)
+	get_tree().root.add_child((points_label))
 	
 
 func _on_area_entered(area):

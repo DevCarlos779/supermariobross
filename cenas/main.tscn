@@ -54,7 +54,7 @@ position = Vector2(-194, 55)
 position = Vector2(-1, 56)
 
 [node name="Koopa" parent="Enemies" instance=ExtResource("7_8enju")]
-position = Vector2(125, 52)
+position = Vector2(126, 52)
 
 [node name="Goomba2" parent="Enemies" instance=ExtResource("6_m56cs")]
 position = Vector2(84, 55)

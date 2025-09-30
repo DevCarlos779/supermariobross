@@ -290,3 +290,5 @@ shape = ExtResource("2_f04lv")
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
 shape = ExtResource("2_f04lv")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
