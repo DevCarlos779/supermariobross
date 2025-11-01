@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dglx4tkvisirk"
+path="res://.godot/imported/transformers-sound-43700.mp3-8e97a520a66c9b6935cb0baa717d2501.mp3str"
+
+[deps]
+
+source_file="res://Assets Super Mario Bros/Audios/transformers-sound-43700.mp3"
+dest_files=["res://.godot/imported/transformers-sound-43700.mp3-8e97a520a66c9b6935cb0baa717d2501.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

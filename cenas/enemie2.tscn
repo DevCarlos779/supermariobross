@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://cyr3imtob01to"]
+
+[ext_resource type="Script" uid="uid://cqr4q624x2adi" path="res://cenas/enemie2.gd" id="1_5ird4"]
+[ext_resource type="Texture2D" uid="uid://bmgu11voxqqfy" path="res://Assets Super Mario Bros/Sprites/Enemie2_walk1.png" id="2_5ird4"]
+[ext_resource type="Texture2D" uid="uid://rq2r08kewwlo" path="res://Assets Super Mario Bros/Sprites/Koopa_Walk1.png" id="2_u7p7v"]
+[ext_resource type="Texture2D" uid="uid://b2q1ddi7o0ef" path="res://Assets Super Mario Bros/Sprites/Koopa_Walk2.png" id="3_1235x"]
+[ext_resource type="Texture2D" uid="uid://jw8hgg1ovss1" path="res://Assets Super Mario Bros/Sprites/Enemie2_walk2.png" id="3_t456j"]
+[ext_resource type="Texture2D" uid="uid://88rqf5phjqry" path="res://Assets Super Mario Bros/Sprites/Enemie2_walk3.png" id="4_x2x7q"]
+[ext_resource type="Shape2D" uid="uid://c5bun2xgmpk6w" path="res://Resources/CollisionShapes/koopa_full.tres" id="5_c3k1o"]
+[ext_resource type="Texture2D" uid="uid://ofa758l8gb5r" path="res://Assets Super Mario Bros/Sprites/Enemie2_walk4.png" id="5_kugcq"]
+[ext_resource type="Texture2D" uid="uid://cqtjjg2n17k8f" path="res://Assets Super Mario Bros/Sprites/Enemie2_walk5.png" id="6_872w3"]
+[ext_resource type="Texture2D" uid="uid://dihedocuw6eg" path="res://Assets Super Mario Bros/Sprites/Enemie2_walk6.png" id="7_akhen"]
+[ext_resource type="Texture2D" uid="uid://wxcmlwt80g2x" path="res://Assets Super Mario Bros/Sprites/Enemie2_death.png" id="8_5ird4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vmbt5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5ird4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t456j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x2x7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kugcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_872w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_akhen")
+}],
+"loop": true,
+"name": &"Enemie2_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5ird4")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u7p7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1235x")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Enemie2" type="Area2D"]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_5ird4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -0.409401)
+scale = Vector2(0.336735, 0.289979)
+sprite_frames = SubResource("SpriteFrames_vmbt5")
+animation = &"Enemie2_walk"
+autoplay = "Enemie2_walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = ExtResource("5_c3k1o")
+
+[node name="RayCast2DDown" type="RayCast2D" parent="."]
+target_position = Vector2(0, 8)
+collision_mask = 18
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -0.75)
+scale = Vector2(0.65, 0.875)
+
+[node name="RayCast2DLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-6.5, 0)
+collision_mask = 18
+
+[node name="RayCast2DRight" type="RayCast2D" parent="."]
+target_position = Vector2(6.5, 0)
+collision_mask = 18
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

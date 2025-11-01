@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kj215k8lwim8"
+path="res://.godot/imported/ClickStart.mp3-a6826a62c3bd16f7f340416314075790.mp3str"
+
+[deps]
+
+source_file="res://Assets Super Mario Bros/Audios/ClickStart.mp3"
+dest_files=["res://.godot/imported/ClickStart.mp3-a6826a62c3bd16f7f340416314075790.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

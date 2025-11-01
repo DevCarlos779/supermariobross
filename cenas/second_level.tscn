@@ -1,0 +1,128 @@
+[gd_scene load_steps=17 format=3 uid="uid://djlte2i7tmvmg"]
+
+[ext_resource type="Script" uid="uid://baigi6wqus7gw" path="res://cenas/second_level.gd" id="1_q7tsy"]
+[ext_resource type="Texture2D" uid="uid://bh2i2pbd72n30" path="res://Assets Super Mario Bros/Sprites/GroundBlock.png" id="1_viuqb"]
+[ext_resource type="Texture2D" uid="uid://8as4lix1a8pr" path="res://Assets Super Mario Bros/Sprites/HardBlock.png" id="2_q7tsy"]
+[ext_resource type="Texture2D" uid="uid://dtkrgfs1x5qrr" path="res://Assets Super Mario Bros/Sprites/UndergroundBrick.png" id="3_nvp77"]
+[ext_resource type="Texture2D" uid="uid://dbhkvad8kmca" path="res://Assets Super Mario Bros/Sprites/UndergroundBlock.png" id="4_puf3h"]
+[ext_resource type="PackedScene" uid="uid://bqfiw6vwe3b1k" path="res://cenas/player.tscn" id="5_1kn4e"]
+[ext_resource type="PackedScene" uid="uid://d1b6l45kby6ct" path="res://cenas/enemie1.tscn" id="6_685x2"]
+[ext_resource type="PackedScene" uid="uid://cyr3imtob01to" path="res://cenas/enemie2.tscn" id="7_2h384"]
+[ext_resource type="FontFile" uid="uid://8in36e0jayw5" path="res://Assets Super Mario Bros/Fonts/AtariClassicChunky-PxXP.ttf" id="8_b1ru3"]
+[ext_resource type="PackedScene" uid="uid://chsag3sh110gj" path="res://cenas/cogumelo.tscn" id="9_s0drx"]
+[ext_resource type="AudioStream" uid="uid://cia16r5yun75" path="res://Assets Super Mario Bros/Audios/MorteInimigo.mp3" id="11_nvp77"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_shl37"]
+texture = ExtResource("1_viuqb")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pcfnh"]
+texture = ExtResource("2_q7tsy")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vva0m"]
+texture = ExtResource("3_nvp77")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ayr2p"]
+texture = ExtResource("4_puf3h")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_pe4u7"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_shl37")
+sources/1 = SubResource("TileSetAtlasSource_pcfnh")
+sources/2 = SubResource("TileSetAtlasSource_vva0m")
+sources/3 = SubResource("TileSetAtlasSource_ayr2p")
+
+[node name="Second_level" type="Node"]
+script = ExtResource("1_q7tsy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2.1)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_pe4u7")
+format = 2
+layer_0/tile_data = PackedInt32Array(655342, 3, 0, 655343, 3, 0, 655344, 3, 0, 655345, 3, 0, 655346, 3, 0, 655347, 3, 0, 655348, 3, 0, 655349, 3, 0, 655350, 3, 0, 655351, 3, 0, 655352, 3, 0, 655353, 3, 0, 655354, 3, 0, 655355, 3, 0, 655356, 3, 0, 655357, 3, 0, 655358, 3, 0, 655359, 3, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 524304, 3, 0, 524303, 3, 0, 524302, 3, 0, 524301, 3, 0, 524300, 3, 0, 524299, 3, 0, 524298, 3, 0, 524297, 3, 0, 524296, 3, 0, 524295, 3, 0, 524294, 3, 0, 524293, 3, 0, 524292, 3, 0, 524291, 3, 0, 524290, 3, 0, 524289, 3, 0, 524288, 3, 0, 589823, 3, 0, 589822, 3, 0, 589821, 3, 0, 589820, 3, 0, 589819, 3, 0, 589818, 3, 0, 589817, 3, 0, 589816, 3, 0, 589815, 3, 0, 589814, 3, 0, 589813, 3, 0, 589812, 3, 0, 589811, 3, 0, 589810, 3, 0, 589809, 3, 0, 589808, 3, 0, 589807, 3, 0, 589806, 3, 0, 524270, 3, 0, 524271, 3, 0, 524272, 3, 0, 524273, 3, 0, 524274, 3, 0, 524275, 3, 0, 524276, 3, 0, 524277, 3, 0, 524278, 3, 0, 524279, 3, 0, 524280, 3, 0, 524281, 3, 0, 524282, 3, 0, 524283, 3, 0, 524284, 3, 0, 524285, 3, 0, 524286, 3, 0, 524287, 3, 0, 458752, 3, 0, 458753, 3, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 3, 0, 458760, 3, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 3, 0, 458768, 3, 0, 458769, 3, 0, 655341, 3, 0, 589805, 3, 0, 524269, 3, 0, 458733, 3, 0, 393197, 3, 0, 327661, 3, 0, 262125, 3, 0, 196589, 3, 0, 131053, 3, 0, 65517, 3, 0, -19, 3, 0, -65555, 3, 0, -131091, 3, 0, -196627, 3, 0, -262163, 3, 0, -327699, 3, 0, -393235, 3, 0, -458771, 3, 0, -524307, 3, 0, -589843, 3, 0, -655379, 3, 0, -720878, 3, 0, -655342, 3, 0, -589806, 3, 0, -524270, 3, 0, -458734, 3, 0, -393198, 3, 0, -327662, 3, 0, -262126, 3, 0, -196590, 3, 0, -131054, 3, 0, -65518, 3, 0, 18, 3, 0, 65554, 3, 0, 131090, 3, 0, 196626, 3, 0, 262162, 3, 0, 327698, 3, 0, 393234, 3, 0, 458770, 3, 0, 524306, 3, 0, 524305, 3, 0, 589841, 3, 0, 589842, 3, 0, -655378, 3, 0, -655377, 3, 0, -655376, 3, 0, -655375, 3, 0, -655374, 3, 0, -655373, 3, 0, -655372, 3, 0, -655371, 3, 0, -655370, 3, 0, -655369, 3, 0, -655368, 3, 0, -655367, 3, 0, -655366, 3, 0, -655365, 3, 0, -655364, 3, 0, -655363, 3, 0, -655362, 3, 0, -655361, 3, 0, -720896, 3, 0, -720895, 3, 0, -720894, 3, 0, -720893, 3, 0, -720892, 3, 0, -720891, 3, 0, -720890, 3, 0, -720889, 3, 0, -720888, 3, 0, -720887, 3, 0, -720886, 3, 0, -720885, 3, 0, -720884, 3, 0, -720883, 3, 0, -720882, 3, 0, -720881, 3, 0, -720880, 3, 0, -720879, 3, 0, 458751, 2, 0, 393222, 2, 0, 393229, 2, 0, 327680, 2, 0, 262145, 2, 0, 196610, 2, 0, 262129, 2, 0, 262130, 2, 0, 262131, 2, 0, 262132, 2, 0, 262133, 2, 0, 262134, 2, 0, 262137, 2, 0, 196592, 2, 0, 196599, 2, 0, -65551, 2, 0, -65550, 2, 0, -65549, 2, 0, -65548, 2, 0, -65547, 2, 0, -65546, 2, 0, -131088, 2, 0, -131081, 2, 0, 131071, 2, 0, 65534, 2, 0, -3, 2, 0, -65540, 2, 0, -131077, 2, 0, -131071, 2, 0, -131070, 2, 0, -131069, 2, 0, -131068, 2, 0, -196605, 2, 0, -196604, 2, 0, -262140, 2, 0, -196606, 2, 0, -262141, 2, 0, -131063, 2, 0, -196600, 2, 0, -131062, 2, 0, -131061, 2, 0, -131060, 2, 0, -131059, 2, 0, -131058, 2, 0, -131057, 2, 0, -196592, 2, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = -240.0
+offset_top = -145.0
+offset_right = -121.0
+offset_bottom = -105.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_b1ru3")
+text = "VIDAS:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_b1ru3")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_left = 125.0
+offset_top = -147.0
+offset_right = 241.0
+offset_bottom = -107.0
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_b1ru3")
+text = "FASE:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_b1ru3")
+
+[node name="Area2D" parent="." instance=ExtResource("9_s0drx")]
+position = Vector2(265, -56)
+
+[node name="EnimiesSecondLevel" type="Node" parent="."]
+
+[node name="Koopa" parent="EnimiesSecondLevel" instance=ExtResource("7_2h384")]
+position = Vector2(181, 95)
+
+[node name="Goomba2" parent="EnimiesSecondLevel" instance=ExtResource("6_685x2")]
+position = Vector2(51, 94)
+
+[node name="Koopa2" parent="EnimiesSecondLevel" instance=ExtResource("7_2h384")]
+position = Vector2(252, 91)
+
+[node name="Koopa3" parent="EnimiesSecondLevel" instance=ExtResource("7_2h384")]
+position = Vector2(-158, 26)
+
+[node name="Koopa4" parent="EnimiesSecondLevel" instance=ExtResource("7_2h384")]
+position = Vector2(-173, -47)
+
+[node name="Goomba3" parent="EnimiesSecondLevel" instance=ExtResource("6_685x2")]
+position = Vector2(-230, -48)
+
+[node name="Goomba4" parent="EnimiesSecondLevel" instance=ExtResource("6_685x2")]
+position = Vector2(-227, 22)
+
+[node name="Goomba5" parent="EnimiesSecondLevel" instance=ExtResource("6_685x2")]
+position = Vector2(160, -50)
+
+[node name="Koopa5" parent="EnimiesSecondLevel" instance=ExtResource("7_2h384")]
+position = Vector2(234, -47)
+
+[node name="Goomba6" parent="EnimiesSecondLevel" instance=ExtResource("6_685x2")]
+position = Vector2(123, 90)
+
+[node name="Goomba7" parent="EnimiesSecondLevel" instance=ExtResource("6_685x2")]
+position = Vector2(-70, 87)
+
+[node name="Player" parent="." instance=ExtResource("5_1kn4e")]
+
+[node name="MorteInimigo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_nvp77")

@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="supermariobros"
+config/name="Castelos-dosDesafios"
 run/main_scene="res://cenas/main.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://cenas/global.gd"
 
 [display]
 
@@ -62,4 +66,4 @@ shoot={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.235294, 0.627451, 1, 1)
+environment/defaults/default_clear_color=Color(0.0607128, 0.162295, 0.294594, 1)

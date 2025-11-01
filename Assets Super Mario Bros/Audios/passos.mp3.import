@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1e0byq2lrvpy"
+path="res://.godot/imported/passos.mp3-1846cd9dd79f541ff13b13f6e49975bc.mp3str"
+
+[deps]
+
+source_file="res://Assets Super Mario Bros/Audios/passos.mp3"
+dest_files=["res://.godot/imported/passos.mp3-1846cd9dd79f541ff13b13f6e49975bc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,93 @@
+[gd_scene load_steps=16 format=3 uid="uid://dgym2kj81ir6b"]
+
+[ext_resource type="Script" uid="uid://cmy6507j8ruwx" path="res://cenas/game_over.gd" id="1_5kvw5"]
+[ext_resource type="AudioStream" uid="uid://cc2gum3rbqjbm" path="res://Assets Super Mario Bros/Audios/clickBotao.mp3" id="2_e64n2"]
+[ext_resource type="FontFile" uid="uid://8in36e0jayw5" path="res://Assets Super Mario Bros/Fonts/AtariClassicChunky-PxXP.ttf" id="4_2obsk"]
+[ext_resource type="Texture2D" uid="uid://bfvv1po5j4nun" path="res://Assets Super Mario Bros/Sprites/fundo-botao.png" id="4_poob8"]
+[ext_resource type="Texture2D" uid="uid://dotkstur7d7u3" path="res://Assets Super Mario Bros/Sprites/fundo-telaGameOver.png" id="4_xjfpx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v6845"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qh60g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5b118"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aluw2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6iol0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_poob8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qov6d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kvw5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2obsk"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6eamb"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_5kvw5")
+
+[node name="AudioGameOver" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_e64n2")
+autoplay = true
+
+[node name="ClickBotao" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_e64n2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 325.5)
+scale = Vector2(1.13379, 0.633789)
+texture = ExtResource("4_xjfpx")
+
+[node name="FundoBotao" type="Sprite2D" parent="."]
+position = Vector2(591, 332)
+scale = Vector2(1.284, 0.628)
+texture = ExtResource("4_poob8")
+
+[node name="TryAgain" type="Button" parent="."]
+offset_left = 351.0
+offset_top = 298.0
+offset_right = 831.0
+offset_bottom = 370.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_2obsk")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v6845")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qh60g")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5b118")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_aluw2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6iol0")
+text = "Tentar Novamente"
+
+[node name="FundoBotao2" type="Sprite2D" parent="."]
+position = Vector2(586, 464)
+scale = Vector2(0.651841, 0.576102)
+texture = ExtResource("4_poob8")
+
+[node name="Sair" type="Button" parent="."]
+offset_left = 366.0
+offset_top = 433.0
+offset_right = 798.0
+offset_bottom = 505.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_2obsk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_poob8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qov6d")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5kvw5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2obsk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6eamb")
+text = "SAIR"
+
+[connection signal="pressed" from="TryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wsqustr55rbd"
+path="res://.godot/imported/GanhandoVida.mp3-769ca16e4e81180fc48d0bc122a1edfd.mp3str"
+
+[deps]
+
+source_file="res://Assets Super Mario Bros/Audios/GanhandoVida.mp3"
+dest_files=["res://.godot/imported/GanhandoVida.mp3-769ca16e4e81180fc48d0bc122a1edfd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlwjgt88oyucn"
+path="res://.godot/imported/congratulationsGame.mp3-2f1813a3e745a85b21ca46e69bf65ebd.mp3str"
+
+[deps]
+
+source_file="res://Assets Super Mario Bros/Audios/congratulationsGame.mp3"
+dest_files=["res://.godot/imported/congratulationsGame.mp3-2f1813a3e745a85b21ca46e69bf65ebd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

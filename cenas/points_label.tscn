@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://blme0eet6piq1"]
 
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets Super Mario Bros/Fonts/font.ttf" id="1_osfoj"]
-[ext_resource type="Script" path="res://cenas/points_label.gd" id="2_377mq"]
+[ext_resource type="Script" uid="uid://c7pbqpjbl3ag" path="res://cenas/points_label.gd" id="2_377mq"]
 
 [node name="PointsLabel" type="Label"]
 offset_right = 40.0

@@ -1,0 +1,59 @@
+[gd_scene load_steps=12 format=3 uid="uid://bintndhj1l5pd"]
+
+[ext_resource type="Script" uid="uid://bpbpnlq0i5l1h" path="res://cenas/finish_game.gd" id="1_385w6"]
+[ext_resource type="AudioStream" uid="uid://dlwjgt88oyucn" path="res://Assets Super Mario Bros/Audios/congratulationsGame.mp3" id="2_dixpd"]
+[ext_resource type="Texture2D" uid="uid://gtdc4irbhve1" path="res://Assets Super Mario Bros/Sprites/tela-Final.png" id="5_5w7r0"]
+[ext_resource type="FontFile" uid="uid://8in36e0jayw5" path="res://Assets Super Mario Bros/Fonts/AtariClassicChunky-PxXP.ttf" id="5_dixpd"]
+[ext_resource type="AudioStream" uid="uid://cc2gum3rbqjbm" path="res://Assets Super Mario Bros/Audios/clickBotao.mp3" id="5_omoc1"]
+[ext_resource type="Texture2D" uid="uid://bfvv1po5j4nun" path="res://Assets Super Mario Bros/Sprites/fundo-botao.png" id="5_v3qk8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wx21i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxsd7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0rqrp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2vi2l"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0vim"]
+
+[node name="FinishGame" type="Node2D"]
+script = ExtResource("1_385w6")
+
+[node name="AudioCongratulations" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_dixpd")
+autoplay = true
+
+[node name="ClickBotao" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_omoc1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+scale = Vector2(1.12891, 0.638672)
+texture = ExtResource("5_5w7r0")
+
+[node name="FundoBotao" type="Sprite2D" parent="."]
+position = Vector2(594, 386)
+scale = Vector2(0.64, 0.628)
+texture = ExtResource("5_v3qk8")
+
+[node name="GoToHome" type="Button" parent="."]
+offset_left = 378.0
+offset_top = 354.0
+offset_right = 810.0
+offset_bottom = 426.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("5_dixpd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wx21i")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kxsd7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_0rqrp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2vi2l")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m0vim")
+text = "INICIO"
+
+[connection signal="pressed" from="GoToHome" to="." method="_on_go_to_home_pressed"]

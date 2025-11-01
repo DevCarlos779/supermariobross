@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://kr77ncs6f076"]
+
+[ext_resource type="Texture2D" uid="uid://c135f55fbxgm3" path="res://Assets Super Mario Bros/Sprites/fireball1.png" id="1_m7ply"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfefq"]
+size = Vector2(8, 8)
+
+[node name="Lazer" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yfefq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m7ply")

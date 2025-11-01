@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://bfsv21esv0eet"]
+
+[ext_resource type="Script" uid="uid://b3by4ak1i7r2" path="res://cenas/start_game.gd" id="1_8q3dy"]
+[ext_resource type="FontFile" uid="uid://8in36e0jayw5" path="res://Assets Super Mario Bros/Fonts/AtariClassicChunky-PxXP.ttf" id="2_820hi"]
+[ext_resource type="AudioStream" uid="uid://cdiafue5036uf" path="res://Assets Super Mario Bros/Audios/introGame.mp3" id="2_alspu"]
+[ext_resource type="Texture2D" uid="uid://bfvv1po5j4nun" path="res://Assets Super Mario Bros/Sprites/fundo-botao.png" id="3_ctyfo"]
+[ext_resource type="AudioStream" uid="uid://cc2gum3rbqjbm" path="res://Assets Super Mario Bros/Audios/clickBotao.mp3" id="5_alspu"]
+[ext_resource type="Texture2D" uid="uid://d0mc2nbj8gdiv" path="res://Assets Super Mario Bros/Sprites/fundo-telaInicial.png" id="6_55eye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55eye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ctyfo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_alspu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qpthy"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8q3dy"]
+
+[node name="StartGame" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_8q3dy")
+
+[node name="AudioTelaInicial" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_alspu")
+autoplay = true
+
+[node name="ClickBotao" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_alspu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1163, 655)
+scale = Vector2(2.26367, 1.26758)
+texture = ExtResource("6_55eye")
+
+[node name="FundoBotao2" type="Sprite2D" parent="."]
+position = Vector2(1150, 1042)
+scale = Vector2(1.01568, 0.924205)
+texture = ExtResource("3_ctyfo")
+
+[node name="FundoBotao3" type="Sprite2D" parent="."]
+position = Vector2(1148, 834)
+scale = Vector2(1.01568, 0.924205)
+texture = ExtResource("3_ctyfo")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 926.0
+offset_top = 798.0
+offset_right = 1358.0
+offset_bottom = 870.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_820hi")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_55eye")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ctyfo")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_alspu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qpthy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8q3dy")
+text = "JOGAR"
+
+[node name="Sair" type="Button" parent="."]
+offset_left = 926.0
+offset_top = 1006.0
+offset_right = 1358.0
+offset_bottom = 1078.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_820hi")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_55eye")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ctyfo")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_alspu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qpthy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8q3dy")
+text = "SAIR"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

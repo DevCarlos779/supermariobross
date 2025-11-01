@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jmqcj2bi5r1h"
+path="res://.godot/imported/Game_Over.mp3-314c80cf16ae9ec33a9e4e2879dbcb94.mp3str"
+
+[deps]
+
+source_file="res://Assets Super Mario Bros/Audios/Game_Over.mp3"
+dest_files=["res://.godot/imported/Game_Over.mp3-314c80cf16ae9ec33a9e4e2879dbcb94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
